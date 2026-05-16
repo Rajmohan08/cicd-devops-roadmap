@@ -34,10 +34,11 @@
           <div class="hero-tags">
             <span>Linux</span>
             <span>GitHub Actions</span>
+            <span>Jenkins</span>
             <span>Docker</span>
             <span>Kubernetes</span>
             <span>Terraform</span>
-            <span>Observability</span>
+            <span>Datadog</span>
           </div>
         </div>
         <div class="hero-panel">
@@ -45,10 +46,10 @@
           <ul>
             <li>Weeks 1-2: Linux + Git + Networking</li>
             <li>Weeks 3-4: Docker + Images + Registry</li>
-            <li>Weeks 5-6: CI pipelines + Testing</li>
+            <li>Weeks 5-6: CI pipelines + Jenkins</li>
             <li>Weeks 7-8: Kubernetes + Deployments</li>
             <li>Weeks 9-10: Terraform + Cloud basics</li>
-            <li>Weeks 11-12: Monitoring + Incident drills</li>
+            <li>Weeks 11-12: Datadog monitoring + Incident drills</li>
           </ul>
           <div class="panel-highlight">Goal: Ship a real project.</div>
         </div>
@@ -77,13 +78,13 @@
           </article>
           <article class="card">
             <h3>4. CI pipelines</h3>
-            <p>Testing, linting, caching, build artifacts, secrets.</p>
-            <div class="deliverable">Deliverable: CI pipeline on push + PR.</div>
+            <p>Testing, linting, caching, build artifacts, secrets, and Jenkins jobs.</p>
+            <div class="deliverable">Deliverable: CI pipeline on push + PR with Jenkinsfile.</div>
           </article>
           <article class="card">
             <h3>5. CD deployments</h3>
-            <p>Automate deployments to dev, staging, prod with approvals.</p>
-            <div class="deliverable">Deliverable: gated production deploy.</div>
+            <p>Automate deployments to dev, staging, prod with approvals and Jenkins CD.</p>
+            <div class="deliverable">Deliverable: gated production deploy from Jenkins.</div>
           </article>
           <article class="card">
             <h3>6. Kubernetes</h3>
@@ -97,8 +98,41 @@
           </article>
           <article class="card">
             <h3>8. Observability</h3>
-            <p>Metrics, logs, traces, alerting, SLOs, incident response.</p>
-            <div class="deliverable">Deliverable: live dashboard + alert.</div>
+            <p>Metrics, logs, traces, Datadog dashboards, alerting, SLOs, incident response.</p>
+            <div class="deliverable">Deliverable: Datadog dashboard + alert monitor.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-header">
+          <h2>Hands-on tool path</h2>
+          <p>Use Jenkins for continuous delivery and Datadog for production visibility.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Jenkins for CD</h3>
+            <p>
+              Start with a declarative Jenkinsfile that installs dependencies, runs tests,
+              builds the site, and publishes static files after a manual approval step.
+            </p>
+            <div class="deliverable">Deliverable: Jenkins pipeline that deploys to a target environment.</div>
+          </article>
+          <article class="card">
+            <h3>Datadog for monitoring</h3>
+            <p>
+              Track uptime, frontend errors, synthetic checks, and response times with a
+              dashboard that tells you whether a release improved or degraded the site.
+            </p>
+            <div class="deliverable">Deliverable: dashboard, synthetic test, and alert policy.</div>
+          </article>
+          <article class="card">
+            <h3>Suggested flow</h3>
+            <p>
+              Git push triggers Jenkins, Jenkins builds and deploys, Datadog validates health,
+              and alerts route back to your incident or rollback process.
+            </p>
+            <div class="deliverable">Deliverable: end-to-end CI/CD plus monitoring loop.</div>
           </article>
         </div>
       </section>
@@ -169,10 +203,12 @@
         <div class="links-grid">
           <a href="https://roadmap.sh/devops" target="_blank" rel="noreferrer">DevOps roadmap</a>
           <a href="https://docs.github.com/actions" target="_blank" rel="noreferrer">GitHub Actions</a>
+          <a href="https://www.jenkins.io/doc/" target="_blank" rel="noreferrer">Jenkins docs</a>
           <a href="https://docs.docker.com" target="_blank" rel="noreferrer">Docker docs</a>
           <a href="https://kubernetes.io/docs/home/" target="_blank" rel="noreferrer">Kubernetes docs</a>
           <a href="https://developer.hashicorp.com/terraform/docs" target="_blank" rel="noreferrer">Terraform docs</a>
           <a href="https://aws.amazon.com/devops/" target="_blank" rel="noreferrer">AWS DevOps</a>
+          <a href="https://docs.datadoghq.com/" target="_blank" rel="noreferrer">Datadog docs</a>
           <a href="https://grafana.com/docs/" target="_blank" rel="noreferrer">Grafana docs</a>
           <a href="https://prometheus.io/docs/" target="_blank" rel="noreferrer">Prometheus docs</a>
           <a href="https://www.nginx.com/resources/wiki/" target="_blank" rel="noreferrer">Nginx basics</a>
@@ -187,10 +223,11 @@
         </div>
         <div class="checklist">
           <div class="check">Repo with CI pipeline + badges</div>
+          <div class="check">Jenkinsfile with build, approval, and deploy stages</div>
           <div class="check">Dockerized services with versioned images</div>
           <div class="check">Automated deployment to dev/staging</div>
           <div class="check">Terraform infra with environments</div>
-          <div class="check">Monitoring dashboard with alerts</div>
+          <div class="check">Datadog dashboard with alerts and uptime checks</div>
           <div class="check">Short demo video or screenshots</div>
         </div>
       </section>
