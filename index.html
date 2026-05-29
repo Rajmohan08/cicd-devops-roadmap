@@ -39,6 +39,8 @@
             <span>Kubernetes</span>
             <span>Terraform</span>
             <span>Datadog</span>
+            <span>PostgreSQL</span>
+            <span>AWS RDS</span>
           </div>
         </div>
         <div class="hero-panel">
@@ -50,6 +52,7 @@
             <li>Weeks 7-8: Kubernetes + Deployments</li>
             <li>Weeks 9-10: Terraform + Cloud basics</li>
             <li>Weeks 11-12: Datadog monitoring + Incident drills</li>
+            <li>Weeks 13-14: PostgreSQL + DB Migrations to AWS RDS</li>
           </ul>
           <div class="panel-highlight">Goal: Ship a real project.</div>
         </div>
@@ -100,6 +103,16 @@
             <h3>8. Observability</h3>
             <p>Metrics, logs, traces, Datadog dashboards, alerting, SLOs, incident response.</p>
             <div class="deliverable">Deliverable: Datadog dashboard + alert monitor.</div>
+          </article>
+          <article class="card">
+            <h3>9. PostgreSQL in DevOps</h3>
+            <p>Schema versioning with Flyway/Liquibase, connection pooling (PgBouncer), backups, PITR, and CI-driven migration pipelines.</p>
+            <div class="deliverable">Deliverable: CI pipeline that validates and applies schema migrations before every deploy.</div>
+          </article>
+          <article class="card">
+            <h3>10. DB Migration to AWS RDS</h3>
+            <p>Migrate large-scale on-prem PostgreSQL/MySQL to AWS RDS using AWS SCT, DMS continuous replication, cutover planning, and post-migration validation.</p>
+            <div class="deliverable">Deliverable: on-prem database live-replicated to RDS with a tested cutover runbook.</div>
           </article>
         </div>
       </section>
@@ -213,6 +226,11 @@
           <a href="https://prometheus.io/docs/" target="_blank" rel="noreferrer">Prometheus docs</a>
           <a href="https://www.nginx.com/resources/wiki/" target="_blank" rel="noreferrer">Nginx basics</a>
           <a href="https://www.tldp.org/LDP/abs/html/" target="_blank" rel="noreferrer">Advanced Bash</a>
+          <a href="https://flywaydb.org/documentation/" target="_blank" rel="noreferrer">Flyway docs</a>
+          <a href="https://www.liquibase.com/blog" target="_blank" rel="noreferrer">Liquibase docs</a>
+          <a href="https://aws.amazon.com/dms/" target="_blank" rel="noreferrer">AWS DMS</a>
+          <a href="https://aws.amazon.com/rds/postgresql/" target="_blank" rel="noreferrer">AWS RDS PostgreSQL</a>
+          <a href="https://aws.amazon.com/rds/mysql/" target="_blank" rel="noreferrer">AWS RDS MySQL</a>
         </div>
       </section>
 
@@ -229,6 +247,9 @@
           <div class="check">Terraform infra with environments</div>
           <div class="check">Datadog dashboard with alerts and uptime checks</div>
           <div class="check">Short demo video or screenshots</div>
+          <div class="check">CI-integrated schema migration pipeline (Flyway or Liquibase)</div>
+          <div class="check">AWS RDS instance provisioned via Terraform with parameter groups</div>
+          <div class="check">DMS replication task with CDC and cutover runbook documented</div>
         </div>
       </section>
 
